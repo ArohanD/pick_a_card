@@ -8,8 +8,12 @@
 }
 
 .helptext {
-	font-size: 1.5em;
 	padding: 0 10%;
+	margin-top: -5%;
+}
+
+.helpTextE {
+	margin-top: auto;
 }
 
 .legalText {
@@ -19,38 +23,48 @@
 
 h1 {
 	text-transform: uppercase;
-	font-size: 7em;
+	font-size: 3em;
 }
 
-.desk {
+html, body {
+	height: 100%;
+	min-height: 100%;
 	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
-.deck {
+.desk {
 	
+}
+
+.inputLabel {
+	color: white;
+}
+
+.deck {
 	padding: 2%;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 }
 
-.card {
+.card1, .card2, .card3 {
 	box-sizing: border-box;
 	width: 60%;
-	height: 400px;
+	height: 150px;
 	margin: 5%;
-	padding: 10px;
 	background-color: #00A0E1;
 	border: 2px solid white;
+	text-align: center;
+	padding-top: 4%;
 }
 
-.card:hover {
+.prizeCard:hover {
 	background-color: #0BC4FA;
 }
 
 .rotated {
-	transition: 0.6s;
-	transform: rotateY(180deg);
+	transition: 2s;
+	transform: rotateY(360deg);
 }
 
 .input {
@@ -61,5 +75,61 @@ h1 {
 button {
 	width: 200%;
 	height: 50px;
+}
+
+.letterHead{
+	overflow: none;
+}
+
+.letterText{
+	overflow: none;
+	padding: 0 20px;
+	margin-top: -5%;
+}
+
+
+
+/*materialize:*/
+
+/* label color */
+.input-field label {
+ color: white;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: white;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid white;
+ box-shadow: 0 1px 0 0 white;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid white;
+ box-shadow: 0 1px 0 0 white;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid white;
+ box-shadow: 0 1px 0 0 white;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: white;
+}
+
+.input-field .helper-text {
+    color: white;
+}
+
+/*Resets that took forever*/
+
+input[type=email]:not(.browser-default), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=email].valid:not(.browser-default) {
+	    border-bottom: 1px solid white;
+}
+
+input[type=email]:not(.browser-default):focus:not([readonly])+label {
+	color: white;
 }
 
