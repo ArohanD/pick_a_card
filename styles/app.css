@@ -3,27 +3,24 @@
 	color: white;	
 }
 
-.intro {
-	text-align: center;
-}
-
 .helptext {
-	padding: 0 10%;
+	padding: 5% 10%;
 	margin-top: -5%;
-}
-
-.helpTextE {
-	margin-top: auto;
+	text-align: center;
 }
 
 .legalText {
 	font-size: 0.8em;
-	align-items: center;
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5%;
 }
 
 h1 {
+	text-align: center;
 	text-transform: uppercase;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 html, body {
@@ -33,7 +30,10 @@ html, body {
 }
 
 .desk {
-	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30%;
 }
 
 .inputLabel {
@@ -45,6 +45,7 @@ html, body {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
 .card1, .card2, .card3 {
@@ -72,11 +73,6 @@ html, body {
 	height: 150px;
 }
 
-button {
-	width: 200%;
-	height: 50px;
-}
-
 .letterHead{
 	overflow: none;
 }
@@ -87,7 +83,18 @@ button {
 	margin-top: -5%;
 }
 
+/*.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
 
+.card {
+	width: 90%;
+	margin-bottom: 0;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
 
 /*materialize:*/
 
@@ -133,3 +140,43 @@ input[type=email]:not(.browser-default):focus:not([readonly])+label {
 	color: white;
 }
 
+/*Desktop view:*/
+
+@media screen and (min-width: 600px) {
+
+	.deck {
+		margin-top: -5%;
+		flex-direction: row;
+	}
+
+	.desk {
+		padding-top: 10%;
+	}
+
+	.desk2 {
+		padding-top: 3%;
+	}
+
+	.prizeCard {
+		height: 300px;
+		padding-top: 70px;
+	}
+
+	.letterHead {
+		font-size: 2em;
+	}
+
+	.rowMod {
+		width: 90%;
+	}
+
+	.card {
+		width: 40%;
+		background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	}
+
+	.thanks {
+		margin-top: -2%;
+	}
+
+}

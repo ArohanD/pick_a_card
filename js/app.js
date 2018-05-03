@@ -11,6 +11,9 @@ $rotator.on('click', (e) => {
     	setTimeout(() => {
                pickLetter(e.target)
         }, 1000);
+        setTimeout(() => {
+               thanksForPlaying()
+        }, 2000);
 	}
 })
 
@@ -23,23 +26,19 @@ $rotator.on('click', (e) => {
 // compliance. But also it's kind of dick move. 
 
 //fill in values for envelopes:
-let env1 = Math.floor(Math.random() * 3 + 1);
-let env2 = Math.floor(Math.random() * 3 + 1);
-let env3 = Math.floor(Math.random() * 3 + 1);
-let outcome = 0;
+let values = [Math.floor(Math.random() * 3 + 1), Math.floor(Math.random() * 3 + 1), Math.floor(Math.random() * 3 + 1)];
+let outcome = 0; //This is for verification and would be sent back to server.
 
 
 function pickLetter(target){
 	let env = target.classList[1];
 	if(env == 'card1'){
-		letter(env1);
+		letter(values[0]);
 	} else if(env == 'card2'){
-		letter(env2);
+		letter(values[1]);
 	} else if(env == 'card3'){
-		letter(env3);
+		letter(values[2]);
 	}
-
-	
 }
 
 function letter(n){
@@ -68,3 +67,6 @@ $input.on('keydown', e => {
 	}
 })
 
+function thanksForPlaying() {
+	document.querySelector(".thanks").innerHTML = "Thanks for playing!";
+}
